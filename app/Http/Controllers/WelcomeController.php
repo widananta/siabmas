@@ -69,9 +69,9 @@ class WelcomeController extends Controller
         }
         
         //8.cari data di tabel pivot
-        $mahasiswa_absent = DB::table('mahasiswa_absent')->where('mahasiswa_id',$mahasiswa->id)->where('absent_id',$absent->id)->first();
-        if($mahasiswa_absent==null){
-            DB::table('mahasiswa_absent')->insert(
+        $absent_mahasiswa = DB::table('absent_mahasiswa')->where('mahasiswa_id',$mahasiswa->id)->where('absent_id',$absent->id)->first();
+        if($absent_mahasiswa==null){
+            DB::table('absent_mahasiswa')->insert(
                 ['mahasiswa_id' => $mahasiswa->id,
                  'absent_id' => $absent->id,
                  'created_at' => $now,

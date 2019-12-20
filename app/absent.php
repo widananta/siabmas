@@ -19,10 +19,6 @@ class absent extends Model
     }
     public function mahasiswa()
     {
-        return $this->belongsToMany(mahasiswa::class)->withPivot()->withTimestamps();
-    }
-    public function mahasiswa_absent()
-    {
-        return $this->hasMany('App\mahasiswa_absent');
+        return $this->belongsToMany(mahasiswa::class)->withPivot('status')->withTimestamps();
     }
 }

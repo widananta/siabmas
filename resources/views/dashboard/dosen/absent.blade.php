@@ -112,6 +112,7 @@
                                             <th scope="col">{{ __('Mulai') }}</th>
                                             <th scope="col">{{ __('Selesai') }}</th>
                                             <th scope="col">{{ __('Status') }}</th>
+                                            <th scope="col">{{ __('Total Absent') }}</th>
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>
@@ -131,7 +132,9 @@
                                                 <span class="badge badge-success">{{$date->diff($now)->format("Tinggal %i Menit")}}</span>
                                               @endif
                                             </td>
+                                            <td>{{$d->mahasiswa->count()}}</td>
                                             <td>
+                                                <a href="/dashboard/absent/show/{{$d->id}}" class="btn btn-sm btn-info"><li class="fa fa-eye"></li></a>
                                             </td>
                                         </tr>
                                         @endforeach

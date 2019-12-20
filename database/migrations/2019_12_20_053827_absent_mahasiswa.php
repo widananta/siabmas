@@ -4,20 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MahasiswaAbsent extends Migration
+class AbsentMahasiswa extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
+    
     public function up()
     {
-        Schema::create('mahasiswa_absent', function (Blueprint $table) {
+        Schema::create('absent_mahasiswa', function (Blueprint $table) {
             $table->uuid('absent_id');
             $table->foreign('absent_id')->references('id')->on('absents')->onDelete('cascade');
             $table->uuid('mahasiswa_id');
             $table->foreign('mahasiswa_id')->references('id')->on('mahasiswas')->onDelete('cascade');
+            $table->string('status',10)->nullable();
             $table->timestamps();
         });
     }
@@ -29,7 +31,7 @@ class MahasiswaAbsent extends Migration
      */
     public function down()
     {
-        Schema::table('mahasiswa_absent', function (Blueprint $table) {
+        Schema::table('absent_mahasiswa', function (Blueprint $table) {
             //
         });
     }

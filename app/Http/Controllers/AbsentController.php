@@ -90,7 +90,16 @@ class AbsentController extends Controller
      */
     public function show($id)
     {
-        //
+        $match = preg_match($this->reguuid, $id);
+        // return($match);
+        if ($match == '0') {
+            return view('errors/404');
+        }
+        $absent = absent::find($id);
+        if ($absent == null) {
+            return view('errors/404');
+        }
+        return view('forms/show/absent', ['data'=>$absent]);
     }
 
     /**

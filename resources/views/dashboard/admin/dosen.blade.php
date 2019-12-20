@@ -74,7 +74,9 @@
                                                                         @method('delete')
                                                                         
                                                                         <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#change_dosen_{{$data->id}}">{{ __('Edit') }}</a>
-                                                                        <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_dosen_{{$data->id}}">{{ __('Delete') }}</a>
+                                                                        @if($data->pengampu->isEmpty())
+                                                                            <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_dosen_{{$data->id}}">{{ __('Delete') }}</a>
+                                                                        @endif
                                                                     </form>    
                                                                 @else
                                                                     <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#change_dosen">{{ __('Edit') }}</a>
@@ -93,7 +95,7 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <a href="/dashboard/dosen/delete/{{$data->id}}" class="btn btn-danger"><i class="fa fa-trash"></i>Hapus</a>
+                                                                            <a href="/dashboard/dosen/delete/{{$data->id}}" class="btn btn-danger"><i class="fa fa-trash"></i>Hapus</a>
                                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>                                       
                                                                     </div>
                                                                 </div>

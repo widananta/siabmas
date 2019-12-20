@@ -47,6 +47,12 @@ Route::prefix('dashboard')->group(function(){
 				Route::post('update', 'MahasiswaController@update');
 				Route::get('delete/{id}', 'MahasiswaController@destroy');
 			});
+			Route::prefix('pengampu')->group(function () {
+				Route::get('', 'PengampuController@index');
+				Route::post('store', 'PengampuController@store');
+				Route::post('update', 'PengampuController@update');
+				Route::get('delete/{id}', 'PengampuController@destroy');
+			});
 		});
 		Route::group(['middleware' => ['role:dosen']], function () {
 			Route::prefix('pengampu_mhs')->group(function () {
@@ -59,6 +65,7 @@ Route::prefix('dashboard')->group(function(){
 		Route::group(['middleware' => ['role:dosen']], function () {
 			Route::prefix('absent')->group(function () {
 				Route::get('{id}', 'AbsentController@index');
+				Route::get('show/{id}', 'AbsentController@show');
 				Route::post('store', 'AbsentController@store');
 			});
 		});

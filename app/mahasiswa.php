@@ -18,6 +18,6 @@ class mahasiswa extends Model
     }
     public function absent()
     {
-        return $this->belongsToMany(absent::class)->withPivot()->withTimestamps();
+        return $this->belongsToMany(absent::class)->withPivot('status')->withTimestamps();
     }
 }
