@@ -176,6 +176,9 @@ class MahasiswaController extends Controller
         if ($mahasiswa == null) {
             return view('errors/404');
         }
+        if(!$mahasiswa->pengampu->isEmpty()){
+            return view('errors/404');
+        }
         $mahasiswa->delete();
         return back()->withStatus(__('Data Mahasiswa berhasil dihapus'));
     }

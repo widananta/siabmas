@@ -162,6 +162,9 @@ class DosenController extends Controller
     public function destroy($id)
     {
         $User = User::find($id);
+        if(!$User->pengampu->isEmpty()){
+            return view('errors/404');
+        }
         $User->delete();
         return back()->withStatus(__('Data Dosen berhasil dihapus'));
     }

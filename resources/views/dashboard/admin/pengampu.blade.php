@@ -53,8 +53,10 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#change_pengampu_{{$d->id}}">{{ __('Edit') }}</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_pengampu_{{$d->id}}">{{ __('Delete') }}</a>
+                                                    @if($d->absent->isEmpty())
+                                                        <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#change_pengampu_{{$d->id}}">{{ __('Edit') }}</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_pengampu_{{$d->id}}">{{ __('Delete') }}</a>
+                                                    @endif
                                                 </div>
                                             </div>
                                             @include('modals.edit.pengampu')

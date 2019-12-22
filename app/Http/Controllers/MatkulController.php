@@ -114,6 +114,9 @@ class MatkulController extends Controller
         if ($matkul == null) {
             return view('errors/404');
         }
+        if(!$matkul->pengampu->isEmpty()){
+            return view('errors/404');
+        }
         $matkul->delete();
         return redirect('dashboard/matkul')->withStatus(__('Matkul Berhasil Dihapus'));
     }

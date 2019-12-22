@@ -140,6 +140,11 @@ class PengampuController extends Controller
         if ($pengampu == null) {
             return view('errors/404');
         }
+        if(!$pengampu->absent->isEmpty()){
+            return view('errors/404');
+        }else{
+            return('b');
+        }
         $pengampu->delete();
         return back()->withStatus(__('Data Pengampu Mata Kuliah berhasil dihapus'));
     }

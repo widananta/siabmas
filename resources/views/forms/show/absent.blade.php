@@ -9,7 +9,39 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">{{ __('Data matkul') }}</h3>
+                                <h3 class="mb-0">{{ __('Absensi ') }}{{$data->pengampu->matkul->nama_matkul}}</h3>
+                                <?php 
+                                    $now = new DateTime();    
+                                    $date = new DateTime($data->ends);
+                                ?> 
+                                <table class="table table-flush">
+                                    <tr>
+                                        <td>Tanggal dan Jam</td>
+                                        <td>:</td>
+                                        <td>{{ \Carbon\Carbon::parse($data->starts, 'Asia/Jakarta')->formatLocalized('%d %B %Y, %H:%M') }}</td>
+                                        <td>Status</td>
+                                        <td>:</td>
+                                        <td>
+                                            @if($now>$date)
+                                                <span class="badge badge-info">Absen Selesai</span>
+                                              @else
+                                                <span class="badge badge-success">{{$date->diff($now)->format("Tinggal %i Menit")}}</span>
+                                              @endif
+                                        </td>
+                                        <td>Kode</td>
+                                        <td>:</td>
+                                        <td>{{$data->kode}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pertemuan Ke</td>
+                                        <td>:</td>
+                                        <td>{{$data->pertemuan_ke}}</td>
+                                        <td>Jumlah Hadir</td>
+                                        <td>:</td>
+                                        <td>{{$data->mahasiswa->count()}}</td>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                </table>
                                 </div>
                             </div>
                         </div>

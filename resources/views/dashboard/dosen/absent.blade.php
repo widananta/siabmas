@@ -11,7 +11,7 @@
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0">{{$pengampu->matkul->nama_matkul}}</h3>
-                                    <table border="0" class="table table-flush">
+                                    <table class="table table-flush">
                                         <tr>
                                             <td>Nama Matkul</td>
                                             <td>:</td>
@@ -81,6 +81,29 @@
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>                        
                                                             </div>
                                                         </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{-- endabsentmodal --}}
+                                            {{-- statistic_modal --}}
+                                            <div class="modal fade" id="show_statistic" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="editModalLabel">Statistik Absen {{$pengampu->matkul->nama_matkul}}</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <!-- Chart -->
+                                                                <div class="chart">
+                                                                    <canvas id="chart-orders" class="chart-canvas"></canvas>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Keluar</button>                        
+                                                            </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,3 +198,7 @@
         });
     </script>
 @endsection
+@push('js')
+    <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
+@endpush

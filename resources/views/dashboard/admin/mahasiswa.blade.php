@@ -79,7 +79,9 @@
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                                     <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#show_mahasiswa{{$d->id}}">{{ __('Show') }}</a>
                                                     <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#change_mahasiswa_{{$d->id}}">{{ __('Edit') }}</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_mahasiswa_{{$d->id}}">{{ __('Delete') }}</a>
+                                                    @if($d->pengampu->isEmpty())
+                                                        <a class="dropdown-item" href="javascript:void(0)"data-toggle="modal" data-target="#delete_mahasiswa_{{$d->id}}">{{ __('Delete') }}</a>
+                                                    @endif
                                                 </div>
                                             </div>
                                             @include('modals.show.mahasiswa')
