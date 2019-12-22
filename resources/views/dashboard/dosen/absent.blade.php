@@ -77,7 +77,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button class="btn btn-primary"><i class="fa fa-pencil"></i>Simpan</button>
+                                                                <button class="btn btn-primary"><i class="fa fa-pencil"></i>Mulai Absen</button>
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>                        
                                                             </div>
                                                         </form>
@@ -98,7 +98,7 @@
                                                             <div class="modal-body">
                                                                 <!-- Chart -->
                                                                 <div class="chart">
-                                                                    <canvas id="chart-orders" class="chart-canvas"></canvas>
+                                                                    <canvas id="myChart"></canvas>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
@@ -199,6 +199,44 @@
     </script>
 @endsection
 @push('js')
+    {{-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script> --}}
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.min.js"></script>
     <script src="{{ asset('argon') }}/vendor/chart.js/dist/Chart.extension.js"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+                @foreach($data as $d)
+                    {{$d->pertemuan_ke}}, 
+                @endforeach
+            ],
+        datasets: [{
+            label: 'Total Absent',
+            data: [
+                @foreach($data as $d)
+                    {{$d->mahasiswa->count()}}, 
+                @endforeach
+            ],
+            backgroundColor: [
+                'rgba(0, 0, 200, 0.5)',
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
 @endpush

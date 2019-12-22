@@ -84,26 +84,16 @@
                     </a>
                 </li>
                 @if(Auth::user()->role=='dosen')
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/absen">
-                        <i class="fas fa-play text-blue"></i> {{ __('Mulai Absen') }}
-                    </a>
-                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="/dashboard/pengampu_mhs">
                         <i class="fas fa-user-friends text-blue"></i> {{ __('Mata Kuliah') }}
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="/dashboard/riwayat">
-                        <i class="fas fa-history text-blue"></i> {{ __('Riwayat Mengajar') }}
-                    </a>
-                </li> --}}
                 @elseif(Auth::user()->role='root_user')
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fa fa-list text-blue" aria-hidden="true"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Manajemen Data') }}</span>
+                        <span class="nav-link-text">{{ __('Manajemen Data') }}</span>
                     </a>
 
                     <div class="collapse show" id="navbar-examples">
