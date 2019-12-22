@@ -49,6 +49,10 @@
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Login') }}</button>
                             </div>
                         </form>
+                        <a href="javascript:void(0)"data-toggle="modal" data-target="#about_us">
+                            <span class="text-muted">{{ __('Tentang Kami') }}</span>
+                        </a>
+                        @include('modals.show.about_us')
                     </div>
                 </div>
                 <div class="row mt-3">
