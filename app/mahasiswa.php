@@ -10,7 +10,7 @@ class mahasiswa extends Model
 {
     public $incrementing = false;
     protected $fillable = [
-        'id', 'nim', 'nama',  'kelas',  'jenis_kelamin',  'foto',  'alamat',  'no_telp', 
+        'id', 'nim', 'nama',  'kelas',  'jenis_kelamin',  'foto',  'alamat',  'no_telp',  'angkatan'
     ];
     public function pengampu()
     {

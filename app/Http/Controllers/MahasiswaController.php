@@ -70,8 +70,9 @@ class MahasiswaController extends Controller
             'nim' => $request->nim,
             'no_telp' => $request->no_telp,
             'alamat' => $request->alamat,
+            'kelas' => $request->prodi,
+            'angkatan' => $request->angkatan,
             'jenis_kelamin' => $request->jenis_kelamin,
-            'kelas' => $request->prodi.' '.$request->angkatan,
         ];
         if ($request->hasFile('image')) {
             
@@ -141,7 +142,8 @@ class MahasiswaController extends Controller
             'no_telp' => $request->no_telp,
             'alamat' => $request->alamat,
             'jenis_kelamin' => $request->jenis_kelamin,
-            'kelas' => $request->prodi.' '.$request->angkatan,
+            'kelas' => $request->prodi,
+            'angkatan' => $request->angkatan,
         ];
         if ($request->hasFile('image')) {
             $filepath = public_path() . '/storage/mahasiswa/' . $Mahasiswa->foto;

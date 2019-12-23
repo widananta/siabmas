@@ -51,9 +51,9 @@
                                         <td>{{$d->nim}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Email</td>
+                                        <td>Kelas</td>
                                         <td>:</td>
-                                        <td>{{$d->kelas}}</td>
+                                        <td>{{$d->kelas.' '.$d->angkatan}}</td>
                                     </tr>
                                     <tr>
                                         <td>Jenis Kelamin</td>

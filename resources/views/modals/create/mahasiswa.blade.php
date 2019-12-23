@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group{{ $errors->has('angkatan') ? ' has-danger' : '' }}">
                                 <label class="form-control-label" for="input-angkatan">{{ __('Angkatan') }}</label>
-                                <input type="text" name="angkatan" id="input-angkatan" class="form-control form-control-alternative{{ $errors->has('angkatan') ? ' is-invalid' : '' }}" placeholder="{{ __('angkatan') }}" value="{{ old('angkatan') }}" required autofocus onkeypress="javascript:return isNumber(event)" maxlength="2" minlength="2">
+                                <input type="text" name="angkatan" id="input-angkatan" class="form-control form-control-alternative{{ $errors->has('angkatan') ? ' is-invalid' : '' }}" placeholder="{{ __('angkatan') }}" value="{{ old('angkatan') }}" required autofocus onkeypress="javascript:return isNumber(event)" maxlength="4" minlength="4">
 
                                 @if ($errors->has('angkatan'))
                                     <span class="invalid-feedback" role="alert">

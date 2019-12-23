@@ -62,11 +62,7 @@
                                             <td>{{$no+1}}</td>
                                             <td>{{$d->nama}}</td>
                                             <td>{{$d->nim}}</td>
-                                            <?php 
-                                            $kelas[$no]=explode(':',$d->kelas); 
-                                            $kelas[$no]=implode(" ",$kelas[$no]);
-                                            ?>
-                                            <td>{{$kelas[$no]}}</td>
+                                            <td>{{$d->kelas.' '.$d->angkatan}}</td>
                                             <td>
                                                 @if($d->jenis_kelamin=='l')
                                                     Laki-laki

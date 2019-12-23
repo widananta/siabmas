@@ -39,22 +39,22 @@
                                 <select name="prodi" required class="form-control" class="form-control form-control-alternative{{ $errors->has('prodi') ? ' is-invalid' : '' }}" value="l">
                                     <option value="">Pilih salah satu</option>
                                     <option
-                                    @if ($kelas[$no][0]=="Manajemen Informatika")
+                                    @if ($d->kelas=="Manajemen Informatika")
                                         selected
                                     @endif 
                                     value="Manajemen Informatika">Manajemen Informatika</option>
                                     <option 
-                                    @if ($kelas[$no][0]=="Pendidikan Teknologi Informasi")
+                                    @if ($d->kelas=="Pendidikan Teknologi Informasi")
                                         selected
                                     @endif 
                                     value="Pendidikan Teknologi Informasi">Pendidikan Teknologi Informasi</option>
                                     <option 
-                                    @if ($kelas[$no][0]=="Teknik Informatika")
+                                    @if ($d->kelas=="Teknik Informatika")
                                         selected
                                     @endif 
                                     value="Teknik Informatika">Teknik Informatika</option>
                                     <option 
-                                    @if ($kelas[$no][0]=="Sistem Informasi")
+                                    @if ($d->kelas=="Sistem Informasi")
                                         selected
                                     @endif 
                                     value="Sistem Informasi">Sistem Informasi</option>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="form-group{{ $errors->has('angkatan') ? ' has-danger' : '' }}">
                                 <label class="form-control-label" for="input-angkatan">{{ __('Angkatan') }}</label>
-                                <input type="text" name="angkatan" id="input-angkatan" class="form-control form-control-alternative{{ $errors->has('angkatan') ? ' is-invalid' : '' }}" placeholder="{{ __('angkatan') }}" value="{{ $kelas[$no][1] }}" required autofocus onkeypress="javascript:return isNumber(event)" maxlength="2" minlength="2">
+                                <input type="text" name="angkatan" id="input-angkatan" class="form-control form-control-alternative{{ $errors->has('angkatan') ? ' is-invalid' : '' }}" placeholder="{{ __('angkatan') }}" value="{{ $d->angkatan }}" required autofocus onkeypress="javascript:return isNumber(event)" maxlength="4" minlength="4">
 
                                 @if ($errors->has('angkatan'))
                                     <span class="invalid-feedback" role="alert">

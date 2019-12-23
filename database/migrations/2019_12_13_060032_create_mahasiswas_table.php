@@ -17,7 +17,8 @@ class CreateMahasiswasTable extends Migration
             $table->uuid('id')->primary();
             $table->string('nim', 11)->unique();
             $table->string('nama', 50);
-            $table->string('kelas', 50);
+            $table->string('kelas', 35);
+            $table->string('angkatan', 4);
             $table->char('jenis_kelamin', 1);
             $table->string('foto', 50)->nullable();
             $table->string('alamat', 120);
