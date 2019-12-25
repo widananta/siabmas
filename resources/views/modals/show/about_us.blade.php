@@ -22,7 +22,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>16051204007</td>
+                                    <td class="font-weight-bold">16051204007</td>
                                 </tr>
                                 <tr>
                                     <td>Job Desk: Operasi CRUD untuk Matkul dan Mahasiswa</td>
@@ -37,7 +37,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>16051204015</td>
+                                    <td class="font-weight-bold">16051204015</td>
                                 </tr>
                                 <tr>
                                     <td>Job Desk: Operasi CRUD untuk pengampu mata kuliah(Role Admin dan Dosen)</td>
@@ -52,7 +52,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>16051204026</td>
+                                    <td class="font-weight-bold">16051204026</td>
                                 </tr>
                                 <tr>
                                     <td>Job Desk: Design Database, Middleware Role, Operasi Absen(Role Dosen, maupun Guest User)</td>
@@ -67,7 +67,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>16051204037</td>
+                                    <td class="font-weight-bold">16051204037</td>
                                 </tr>
                                 <tr>
                                     <td>Job Desk: Operasi CRUD untuk User, Profil</td>
@@ -82,7 +82,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>16051204041</td>
+                                    <td class="font-weight-bold">16051204041</td>
                                 </tr>
                                 <tr>
                                     <td>Job Desk: Migrasi Database, Seeder Faker User dan Mahasiswa</td>
