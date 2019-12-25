@@ -59,9 +59,9 @@ class AbsentController extends Controller
      */
     public function store(Request $request)
     {   
-        $starts =date('d-m-Y H:i:s');
-        $ends =strtotime(date('d-m-Y H:i:s'))+900;
-        $ends =date('d-m-Y H:i:s',$ends);
+        $starts =date('Y-m-d H:i:s');
+        $ends =strtotime(date('Y-m-d H:i:s'))+900;
+        $ends =date('Y-m-d H:i:s',$ends);
         //autorisasi password
         if (auth()->user() && Hash::check($request->password, auth()->user()->password)) {
             //mencari jumlah absent sebelumnya
