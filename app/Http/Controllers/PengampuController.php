@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Pengampu;
-use App\Matkul;
+use App\pengampu;
+use App\matkul;
 use App\User;
 
 use Illuminate\Support\Str;
