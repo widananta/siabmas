@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\pengampu;
-use App\Matkul;
-use App\Mahasiswa;
+use App\matkul;
+use App\mahasiswa;
 class HomeController extends Controller
 {
     /**
