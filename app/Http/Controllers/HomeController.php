@@ -41,7 +41,8 @@ class HomeController extends Controller
             // $matkul=matkul::count();
             // $pengampu=pengampu::count();
             // $mahasiswa=mahasiswa::count();
-            return view('dashboard', ['matkul' => $matkul,'dosen' => $dosen,'pengampu' => $pengampu,'mahasiswa' => $mahasiswa]);
+            // return view('dashboard', ['matkul' => $matkul,'dosen' => $dosen,'pengampu' => $pengampu,'mahasiswa' => $mahasiswa]);
+            return view('dashboard', ['dosen' => $dosen]);
         }
     }
 }
