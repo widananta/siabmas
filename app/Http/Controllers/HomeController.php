@@ -38,11 +38,10 @@ class HomeController extends Controller
             return view('dashboard', ['mahasiswa' => $mahasiswa,'absent' => $absent]);
         }else{
             $dosen=user::where('role','dosen')->count();
-            // $matkul=matkul::count();
-            // $pengampu=pengampu::count();
-            // $mahasiswa=mahasiswa::count();
-            // return view('dashboard', ['matkul' => $matkul,'dosen' => $dosen,'pengampu' => $pengampu,'mahasiswa' => $mahasiswa]);
-            return view('dashboard', ['dosen' => $dosen]);
+            $matkul=matkul::count();
+            $pengampu=pengampu::count();
+            $mahasiswa=mahasiswa::count();
+            return view('dashboard', ['matkul' => $matkul,'dosen' => $dosen,'pengampu' => $pengampu,'mahasiswa' => $mahasiswa]);
         }
     }
 }
