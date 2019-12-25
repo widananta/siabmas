@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Total Matkul yang diampu</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{Auth::user()->pengampu->count()}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{Auth::user()->pengampu->count()}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -30,7 +30,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Mahasiswa Diajar</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$mahasiswa}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$mahasiswa}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -47,7 +47,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Absent yang dibuat</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$absent}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$absent}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -67,7 +67,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Dosen</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$dosen}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$dosen}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -84,7 +84,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Mahasiswa</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$mahasiswa}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$mahasiswa}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -101,7 +101,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Matkul</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$matkul}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$matkul}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -118,7 +118,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Matkul diampu</h5>
-                                        {{-- <span class="h2 font-weight-bold mb-0">{{$pengampu}}</span> --}}
+                                        <span class="h2 font-weight-bold mb-0">{{$pengampu}}</span>
                                     </div>
                                     <div class="col-auto">
                                         <div class="icon icon-shape bg-info text-white rounded-circle shadow">

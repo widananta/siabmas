@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Mahasiswa;
+use App\mahasiswa;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Input;
