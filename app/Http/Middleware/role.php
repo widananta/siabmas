@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class role
+class Role
 {
     /**
      * Handle an incoming request.
